@@ -1,0 +1,14 @@
+<div class="card-group">
+    <div class="card" *ngFor="let movie of movies">
+        <img [src]="movie.poster" [alt]="movie.nome" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{ movie.nome }}</h5>
+            <p class="card-text">{{ movie.descricao }}</p>
+            <p class="card-text">Diretor: {{ movie.diretor }}</p>
+            <p class="card-text">Gênero: {{ movie.genero }}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{ movie.ano }}</small>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function($){
+  var ventana_ancho = $(window).width();
+  var ventana_alto = $(window).height();
+  
+  document.getElementById("grid-container").style.gridTemplateRows = ventana_alto / 2.3 + "px" + " " + ventana_alto / 2.3 + "px";
+});
+</script>
+<style>
+.grid-container {display:grid; grid-template-columns:auto auto; grid-gap:20px; padding:20px;}
+.grid-container > div {text-align:center; padding:20px 0; font-size:30px;}
+.item1 {grid-row:1 / span 2; background-color:blue;}
+.item2 {background-color:red; /* For browsers that do not support gradients */ background-image:linear-gradient(to right, red , yellow);}
+.item3 {background:url(https://code7.com/wp-content/uploads/2021/05/bg-forma-1-e1620845761612.png) center no-repeat; color:white;}
+</style>
+</head>
+<body>
+
+<div class="grid-container" id="grid-container">
+  <div class="item1"></div>
+  <div class="item2"></div>
+  <div class="item3">Oi Code7</div>
+</div>
+
+</body>
+</html>
